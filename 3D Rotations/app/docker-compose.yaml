@@ -1,0 +1,29 @@
+version: '3.7'
+
+services:
+  app:
+    build: .
+    image: chuy777/3d_rotations:v1
+    container_name: 3d_rotations
+    env_file: ./app/.env
+    environment:
+      - DISPLAY=$DISPLAY
+    privileged: true
+    volumes:
+      # - ./app:/app  
+      - volume_3d_rotations:/app
+      - /tmp/.X11-unix:/tmp/.X11-unix:ro    # UI
+      # - /dev:/dev:ro                        # USB Devices
+    # ports:
+    #   - 5000:5000
+    networks:
+      - network_3d_rotations
+
+volumes:
+  volume_3d_rotations:
+    name: volume_3d_rotations
+
+networks:
+  network_3d_rotations:
+    name: network_3d_rotations
+    external: true
