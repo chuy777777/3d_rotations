@@ -22,6 +22,7 @@ services:
 volumes:
   volume_3d_rotations:
     name: volume_3d_rotations
+    external: false
 
 networks:
   network_3d_rotations:
