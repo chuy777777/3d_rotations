@@ -7,16 +7,6 @@
 # figlet App (de aqui se optiene el texto para el logo)
 app_name="3d_rotations"
 
-# function print_logo(){
-#     echo "    _                 "
-#     echo "   / \   _ __  _ __   "
-#     echo "  / _ \ | '_ \| '_ \  "
-#     echo " / ___ \| |_) | |_) | "
-#     echo "/_/   \_\ .__/| .__/  "
-#     echo "        |_|   |_|     "
-#     echo "                      "
-# }
-
 function print_logo(){
     figlet $app_name
     echo ""
