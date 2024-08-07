@@ -1,7 +1,6 @@
 import numpy as np
 import customtkinter  as ctk
 import tkinter as tk
-from decouple import config
 
 from components.create_frame import CreateFrame
 from components.create_scrollable_frame import CreateScrollableFrame
@@ -205,12 +204,9 @@ class App(ctk.CTk):
     def __init__(self):
         ctk.CTk.__init__(self)
 
-        # Nombre de la aplicacion
-        APP_NAME=config("APP_NAME")
-
         # Configuramos nuestra aplicacion
         self.geometry("1366x768")
-        self.title(APP_NAME)
+        self.title("Rotaciones 3D")
 
         # Configuramos el sistema de cuadricula
         self.grid_rowconfigure(0, weight=1)

@@ -5,8 +5,9 @@ services:
     build: .
     image: chuy777/3d_rotations:v1
     container_name: 3d_rotations
-    env_file: ./app/.env
+    # env_file: ./app/.env
     environment:
+      - PYTHONUNBUFFERED=1
       - DISPLAY=$DISPLAY
     privileged: true
     volumes:
